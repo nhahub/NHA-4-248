@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'; // <-- 1. ضفنا الاستيراد هنا
+
 export default function CuratedToday() {
   return (
     <section className="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="menu">
@@ -81,9 +83,14 @@ export default function CuratedToday() {
               <p className="font-body-md text-[16px] opacity-80 mb-6">
                 Discover our complete selection of savory and sweet.
               </p>
-              <button className="border border-white/40 px-6 py-2 rounded-full font-label-md text-[14px] hover:bg-white hover:text-primary transition-all">
+              
+              {/* 2. التعديل هنا: حولنا الزرار لـ Link */}
+              <Link 
+                to="/menu" 
+                className="inline-block border border-white/40 px-6 py-2 rounded-full font-label-md text-[14px] hover:bg-white hover:text-primary transition-all"
+              >
                 Explore
-              </button>
+              </Link>
             </div>
           </div>
 

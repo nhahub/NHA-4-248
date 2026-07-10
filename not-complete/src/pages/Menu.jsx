@@ -1,4 +1,18 @@
-export default function Menu() {
+import { Link } from 'react-router-dom';
+export default function Menu({ addToCart }) {
+  const handleAddSpecialToOrder = () => {
+    const specialItem = {
+      id: Date.now(), 
+      name: 'Honeyed Lavender Macchiato',
+      price: '6.75',
+      size: 'Standard',
+      milk: 'Oat Milk',
+      quantity: 1,
+      image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    };
+    
+    addToCart(specialItem); 
+  };
   return (
     <div className="pt-16 pb-20 px-6 md:px-16 max-w-[1200px] mx-auto">
       {/* Menu Intro Section */}
@@ -31,9 +45,12 @@ export default function Menu() {
               <span className="text-2xl font-headline-md text-primary font-semibold">
                 $6.75
               </span>
-              <button className="bg-primary text-on-primary px-8 py-3.5 rounded-full font-label-md text-sm hover:opacity-90 transition-all shadow-sm active:scale-95">
-                Add to Order
-              </button>
+              <button 
+  onClick={handleAddSpecialToOrder} 
+  className="bg-primary text-on-primary px-8 py-3.5 rounded-full font-label-md text-sm hover:opacity-90 transition-all shadow-sm active:scale-95"
+>
+  Add to Order
+</button>
             </div>
           </div>
           <div className="flex-1 w-full h-72 md:h-96 rounded-xl overflow-hidden shadow-sm">
@@ -56,7 +73,6 @@ export default function Menu() {
               <span className="font-label-md text-sm tracking-wide">Coffee & Tea</span>
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </button>
-            {/* بقية الأزرار... */}
           </nav>
           
           {/* Morning Note Box */}
@@ -81,7 +97,7 @@ export default function Menu() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
               {/* Item */}
-              <div className="group cursor-pointer">
+              <Link to="/product/house-cappuccino" className="group cursor-pointer block">
                 <div className="aspect-square rounded-2xl overflow-hidden mb-5 bg-surface-container relative">
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -99,13 +115,13 @@ export default function Menu() {
                 <p className="text-on-surface-variant text-sm leading-relaxed pr-2">
                   Double shot of Hearth Blend espresso with micro-foamed milk.
                 </p>
-              </div>
+              </Link>
               {/* Item */}
-              <div className="group cursor-pointer">
+              <Link to="/product/house-cappuccino" className="group cursor-pointer block">
                 <div className="aspect-square rounded-2xl overflow-hidden mb-5 bg-surface-container relative">
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    src="https://images.unsplash.com/photo-1536514072410-5019a3c69182?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    src="https://i.pinimg.com/1200x/7b/55/2c/7b552ca3aa731c6752b644111eed3253.jpg"
                     alt="Ceremonial Matcha"
                   />
                 </div>
@@ -116,7 +132,7 @@ export default function Menu() {
                 <p className="text-on-surface-variant text-sm leading-relaxed pr-2">
                   Stone-ground Uji matcha whisked with your choice of artisanal milk.
                 </p>
-              </div>
+              </Link>
             </div>
           </section>
 
@@ -128,7 +144,7 @@ export default function Menu() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
               {/* Item */}
-              <div className="group cursor-pointer">
+              <Link to="/product/house-cappuccino" className="group cursor-pointer block">
                 <div className="aspect-square rounded-2xl overflow-hidden mb-5 bg-surface-container relative">
                   <img
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -146,8 +162,44 @@ export default function Menu() {
                 <p className="text-on-surface-variant text-sm leading-relaxed pr-2">
                   Our 3-day fermented pastry with European cultured butter.
                 </p>
-              </div>
+              </Link>
             </div>
+            {/* Breakfast Bowls Section */}
+          <section id="breakfast">
+            <div className="flex items-baseline justify-between mb-10 border-b border-outline-variant/30 pb-4">
+              <h3 className="font-headline-lg text-3xl text-on-surface">
+                Breakfast Bowls
+              </h3>
+              <span className="text-on-surface-variant font-label-md text-sm">
+                Served until 12pm
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+              <Link to="/product/house-cappuccino" className="group cursor-pointer block">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-surface-container relative">
+                  <img
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    alt="Seasonal Berry Bowl"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-primary/90 text-white px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm shadow-sm">
+                      Gluten Free
+                    </span>
+                  </div>
+                </div>
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-headline-md text-xl text-on-surface">
+                    Seasonal Berry Bowl
+                  </h4>
+                  <span className="text-primary font-semibold">$12.00</span>
+                </div>
+                <p className="text-on-surface-variant text-sm leading-relaxed pr-2">
+                  House-made granola, whipped local yogurt, and market berries.
+                </p>
+              </Link>
+            </div>
+          </section>
           </section>
 
         </div>

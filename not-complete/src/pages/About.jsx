@@ -160,7 +160,175 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* Inside the Hearth */}
+      <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+        <div className="flex flex-col md:flex-row gap-16 items-center">
+          <div className="w-full md:w-1/2 space-y-6">
+            <h2 className="font-headline-lg text-primary">
+              Inside the Hearth
+            </h2>
+            <p className="font-body-md text-on-surface-variant">
+              Our kitchen operates 24/7, moving in rhythm with the seasons and
+              the sun. While the neighborhood sleeps, our hearth begins to roar.
+              We invite you to peek behind the curtain at the labor of love that
+              fuels your morning.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-4">
+                <span className="material-symbols-outlined text-secondary-fixed-dim mt-1">
+                  check_circle
+                </span>
+                <div>
+                  <h4 className="font-label-md font-bold">
+                    Small-Batch Daily
+                  </h4>
+                  <p className="text-sm opacity-80">
+                    We only bake what we need, ensuring zero waste and peak
+                    freshness.
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="material-symbols-outlined text-secondary-fixed-dim mt-1">
+                  check_circle
+                </span>
+                <div>
+                  <h4 className="font-label-md font-bold">
+                    Natural Leavening
+                  </h4>
+                  <p className="text-sm opacity-80">
+                    No commercial yeast. Just water, flour, and our decade-old
+                    starter.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="w-full md:w-1/2 grid grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <img
+                className="w-full aspect-square object-cover rounded-xl shadow-md"
+                alt="Roasting coffee beans"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQzvaHkkPFjunjis_Xld_-xvgaHCTOhWRz7Igz3fgsMBi51O9ruRTwewUd8hzxBSvf3ujNihd-R2doirRkbnBnt_W0keeN2QrK3GQjHlpzcouXirbBk0kwnIrEcbaR4VFBWgeTXMAengeRtOv3YeyEI9ZyQTK913cy7Xq224lOKBwCSa1IwM0oVQs-JYAaYbu3YmreSLfy61TrVwl6Z3g4FdgPMUIfAB6ypxFvSXQx-h45c9SAyXZm6b6FflTqQKbCPFRENlC8ZDdz"
+              />
+              <img
+                className="w-full aspect-[3/4] object-cover rounded-xl shadow-md"
+                alt="Heirloom grains"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrJa_wtU0h40aPdmsrVBJUOwuihHEL-GRtJyXfAU63Z5eB-nkn_7aBv3E4Y6WBgugIZodcaMRYwybSExk8JewBWNnj8oiUA0Rbt2LGuh2q-BLYvxI89AYo9XOhV0x1EFVMuFGMq4jcZT2vUrdOdzrZZL2t5tC22DuK_EIJXX5p6esnllzQgfaWZp94mx7Jcj1_vHKlrXg_pjhUpnM2Wr4HQ2jvIDbwjklavUQZLCAtv-_-QmSWDo2jWxE1lZaSgktF9L1LTBPNdB8D"
+              />
+            </div>
+            <div className="pt-8 space-y-4">
+              <img
+                className="w-full aspect-[3/4] object-cover rounded-xl shadow-md"
+                alt="Golden croissants"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAslNu5YBqLSKymmaLmv-9XDDhc0vIMXubUG1wVw2mMQ3QOPCH9JM15T239nkekBuHaJ9MW67UcQNhlOX2HL6amyNiAZm_0pkJ7vXsS22EDam9BbWguK6DVec-QIWPCWyEoKM7RM5xQXRjPXt5mzHLuomlxjS1gAjTIxSO29gwPRKeEetu-q27oh5XyDVccBYWJIZF70plyWd6vwxTCKTeDgLyNTP4v3w_rkGkS-R8L5JAJMhnb7hkFqCa2fEcpXM783XRtr0yPSXZn"
+              />
+              <img
+                className="w-full aspect-square object-cover rounded-xl shadow-md"
+                alt="Blackboard menu"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6421zaEIewBYgjyYxbaWrnkfLd4TM2Uwx0APF854cArH5RzvoEr0XY-ceqURKv_ecO4a0xy6XKhS_duTquvFZd5oq4xQT5qrDXBx6LxPhEbkXZOJIkAl81QitbxXV8lfXjj6ACPqFZ9olwgfdKN9De66YBLqDrOnLcPYcPbEfPWCpjEn3d-jplaTRYn-I4Ye2a8i3Ny2lv2rCAcxF2HW6frKiZ-WGMtJ95nKClFSq-bdQYLy4LEt10-QMA2tQpSGOKpAcV66rFXxi"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* Our Farmers & Partners */}
+      <section className="py-24 bg-surface">
+        <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-headline-lg text-primary mb-4">
+              Our Farmers & Partners
+            </h2>
+            <p className="font-body-md text-on-surface-variant max-w-xl mx-auto">
+              We believe the best bread starts with the best soil. Meet the
+              local stewards who make our hearth possible.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg">
+                <img
+                  alt="Valley View Farms"
+                  className="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW1c0KwLRwGKaq4UL0ekJVi_C406E2itsGRpcogMJVm59tuAJC5qpFmPd_A6baBCTIeHedvSW88dcW8UlWxtOkkdvPZOJ7ijyp7hkW3GLohzqZfXYgFk2dwh_vWLAo9Gq4MPHepaKRbVP--78r_xmRJV7nSUC4Nmnuz9utaKCfR_hFGyt9UJvwfeTG00p1eiWTxndMVkeS2ybLFo5tQR2IdtrDwIyEC_n-lNqxjk5wFUOIzhC1FbCGvP1RfGFJ3PSJ8Tj6SS8quoxa"
+                />
+              </div>
+              <h4 className="font-headline-md text-primary">
+                Valley View Farms
+              </h4>
+              <p className="text-secondary font-label-md mb-4">
+                12 miles away
+              </p>
+              <p className="font-body-md text-on-surface-variant">
+                Supplying our heritage Red Fife and Turkey Red wheat. Their
+                regenerative practices ensure every grain is packed with
+                nutrients and flavor.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg">
+                <img
+                  alt="Oak Ridge Apiary"
+                  className="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvZoN_5wNz23VBHRtnraRja1LEU6UXZnk24y_NLewnRMMXfEf7L4hqAC0ac1GozS3Abh6gxE0e8DapywViNT6f2tPLAkrsv2y4b8HzKAMmEqlwEcJD_W791FxYa8GgH0NSc-BFQSBn5bKdm1dMi3_gN1_mIsms2qpmhTInJiy5OX7sTFgDTUAKgR7q2DqhyD9InPGtc9wiLxdeXfUvaWZJrH_qBDH7JBlKqnCwQ7XntqhTDXxdvHb8n_SoIHnZsxJZGf2eMq7w4Spi"
+                />
+              </div>
+              <h4 className="font-headline-md text-primary">
+                Oak Ridge Apiary
+              </h4>
+              <p className="text-secondary font-label-md mb-4">
+                8 miles away
+              </p>
+              <p className="font-body-md text-on-surface-variant">
+                Providing the raw wildflower honey used in our seasonal
+                pastries. Their bees forage across protected local meadows for a
+                unique floral profile.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg">
+                <img
+                  alt="Stone Mill Grains"
+                  className="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt16rVhkOIHc-Fb1eMsV4sbTk7a5qhDRPefhOHitMcFUn1Xj3Ue7SfCUc5NV21HCCcmquEjKt5DW_c3cYVdRRutB6hm7otBU25IttSGjn3RoKYjMTvG94O36QjHL734-UQJtKZ997iwEHcCKRWZb2NwXvDLFbtt_DCnVlvXX14-IOWdMItwM0WAxTa8n2zR-vh2fMjBSZf4qOSiFX84gArw6L4MRT-Btkml5F-_hh-V5uj_Sm1inm1EtMKGK6iNqxawVW7CYlMliYs"
+                />
+              </div>
+              <h4 className="font-headline-md text-primary">
+                Stone Mill Grains
+              </h4>
+              <p className="text-secondary font-label-md mb-4">
+                24 miles away
+              </p>
+              <p className="font-body-md text-on-surface-variant">
+                Our source for cold-milled rye and spelt. By milling at low
+                temperatures, they preserve the essential oils and deep aroma of
+                the grain.
+              </p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-48 h-48 rounded-full overflow-hidden mb-6 shadow-lg">
+                <img
+                  alt="Green Pastures Dairy"
+                  className="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLV5Wurrnw4FjXOEGQI4bQvulCwtKZiBPYEnXF24KkPuFD_uUYCO73JWA_TDOC6AA2Ux6BxdislmbbeeEzCnKrJpMxZGUG3TiPY0adgglBJBBPwyr5blNl3tgnBlGh_jE3Fs2HgOXdEpNyz26w2Zbl9el5-_Qn-qWdP8jQXvRFvab6gvhqfkL7z3ZjVykzxgxFSMPMqQ2anBUU7elmQxkty8a-cBLUl2MNPqUGneQtFMXYKstRwV5jqEqJpwQdxZv5h2FV9euPikQK"
+                />
+              </div>
+              <h4 className="font-headline-md text-primary">
+                Green Pastures
+              </h4>
+              <p className="text-secondary font-label-md mb-4">
+                15 miles away
+              </p>
+              <p className="font-body-md text-on-surface-variant">
+                The source of our high-fat cultured butter and fresh cream.
+                Their grass-fed cows produce the richness essential for our
+                hand-laminated croissants.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* استدعاء مكون النشرة البريدية هنا */}
       <Newsletter />
     </div>
