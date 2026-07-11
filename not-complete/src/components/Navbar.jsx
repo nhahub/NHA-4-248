@@ -55,6 +55,9 @@ export default function Navbar({ onOpenCart }) {
 
       {/* أيقونة السلة */}
       <div className="flex items-center gap-4">
+        <Link to="/login" className="text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200">
+  <span className="material-symbols-outlined text-[28px]">account_circle</span>
+</Link>
         <button 
           onClick={onOpenCart} 
           className="text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200"

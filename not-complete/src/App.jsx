@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react'; // ضفنا useEffect هنا
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -9,21 +9,35 @@ import CartDrawer from './components/CartDrawer';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import About from './pages/About';
-import ProductDetail from './pages/ProductDetail'; // استيراد صفحة المنتج
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import ProductDetail from './pages/ProductDetail'; 
 
 export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   
-  // 1. مصفوفة لتخزين المنتجات اللي بتنضاف للسلة
-  const [cartItems, setCartItems] = useState([]);
+  // 1. تعديل هنا: بدل ما نبدأ بمصفوفة فاضية، هنخليه يبص الأول في الـ localStorage
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem('artisanal_cart');
+    // لو لقى بيانات محفوظة، يرجعها، لو ملقاش يرجع مصفوفة فاضية
+    if (savedCart) {
+      return JSON.parse(savedCart);
+    } else {
+      return [];
+    }
+  });
 
-  // 2. دالة لإضافة المنتج وفتح السلة تلقائياً
+  // 2. إضافة useEffect: وظيفتها إنها تشتغل أوتوماتيك كل ما السلة (cartItems) تتغير
+  // وبتاخد البيانات الجديدة تحفظها في الـ localStorage
+  useEffect(() => {
+    localStorage.setItem('artisanal_cart', JSON.stringify(cartItems));
+  }, [cartItems]);
+
   const addToCart = (product) => {
     setCartItems((prevItems) => [...prevItems, product]);
-    setIsCartOpen(true); // افتح العربة أول ما يضيف المنتج
+    setIsCartOpen(true); 
   };
 
-  // 3. دالة لحذف منتج من السلة
   const removeFromCart = (productId) => {
     setCartItems((prevItems) => prevItems.filter(item => item.id !== productId));
   };
@@ -38,16 +52,17 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu addToCart={addToCart} />} />
             <Route path="/about" element={<About />} />
-            
-            {/* 4. مسار صفحة المنتج، وبنبعتلها دالة الإضافة */}
             <Route path="/product/:id" element={<ProductDetail addToCart={addToCart} />} />
+            
+            {/* تم نقل مسارات تسجيل الدخول هنا داخل الـ Routes بشكل صحيح */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </main>
 
         <Footer />
         <MobileNav />
 
-        {/* 5. نمرر بيانات السلة للدرج (Drawer) */}
         <CartDrawer 
           isOpen={isCartOpen} 
           onClose={() => setIsCartOpen(false)} 
